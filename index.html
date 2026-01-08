@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Time Predictor</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+  <script src="./app.js" type="module"></script>
+</head>
+
+<body>
+  <h1>Unen tarpeen ennustaminen</h1>
+  <h2>Mallia koulutetaan...</h2>
+  <h2><span id="predictionWait"></span></h2>
+
+
+  <form id="predictionForm">
+    <label>Liikunta (tuntia): <input type="number" id="workoutTime" step="0.1"></label><br>
+    <label>Lukeminen (tuntia): <input type="number" id="readingTime" step="0.1"></label><br>
+    <label>Ruutuaika (tuntia): <input type="number" id="phoneTime" step="0.1"></label><br>
+    <label>Työt (tuntia): <input type="number" id="workHours" step="0.1"></label><br>
+    <label>Kofeiinin saanti (mg): <input type="number" id="caffeine" step="0.1"></label><br>
+    <label>Rentoutuminen (tuntia): <input type="number" id="relaxationTime" step="0.1"></label><br>
+    <button type="submit">Ennusta</button>
+  </form>
+
+  <h2>Ennustettu unen tarve: <span id="predictionOutput">-</span> tuntia</h2>
+
+</body>
+
+</html>
